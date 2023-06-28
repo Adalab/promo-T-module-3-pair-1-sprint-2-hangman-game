@@ -1,4 +1,16 @@
-function Main() {
+function Main({
+  word,
+  userLetters,
+  setUserLetters,
+  lastLetter,
+  setLastLetter,
+  handleKeyDown,
+  handleChange,
+  handleLastLetter,
+  getNumberOfErrors,
+  renderSolutionLetters,
+  renderErrorLetters,
+}) {
   // events
 
   const handleKeyDown = (ev) => {
