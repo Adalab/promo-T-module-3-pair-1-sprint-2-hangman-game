@@ -1,9 +1,9 @@
-import { useEffect, useState} from "react";
+import { useEffect, useState } from 'react';
 import Dummy from './Dummy';
 import Form from './Form';
-import SolutionLetters from './SolutionLetters';
 
-//API
+import SolutionLetters from './SolutionLetters.js';
+// api
 import getWordFromApi from '../../services/api';
 
 function Main() {
@@ -16,11 +16,8 @@ function Main() {
       setWord(word);
     });
   }, []);
-}  
 
-
-
-// events
+  // events
 
   const handleKeyDown = (ev) => {
     // Sabrías decir para qué es esta línea
@@ -80,7 +77,6 @@ function Main() {
       );
     });
   };
-
   return (
     <main className='main'>
       <section>
@@ -98,5 +94,6 @@ function Main() {
       <Dummy getNumberOfErrors={getNumberOfErrors} />
     </main>
   );
+}
 
 export default Main;
